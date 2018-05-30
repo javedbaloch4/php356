@@ -1,0 +1,3 @@
+Project Folder:  E:\me\dev\xampp\htdocs\evs\php356\project
+
+Project URL : http://localhost/project/

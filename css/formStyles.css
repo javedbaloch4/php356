@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+#form-container{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.row{
+    width:100%;
+    height:auto;
+    position:relative;
+    background-color:#999999;
+}
+
+.row:nth-of-type(2n){
+    background-color:#CCC;	
+}
+
+#heading-row{
+    font-size:36px;
+    text-align:center;	
+}
+
+.cell-left{
+    width:40%;	
+}
+
+.cell-right{
+    width:60%;	
+}
+
+.cell{
+    height:auto;
+    position:relative;
+    float:left;
+}
+
+.cell a{
+    color: white;
+    font-weight: bold;
+}
+
+.clear-box{
+    clear:both;	
+}

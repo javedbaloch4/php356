@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>My Store Demo</title>
+<link href="../css/styles.css" media="all" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<style type="text/css"> 
+#header-banner-text-heading, .footer-menu { zoom: 1;}
+</style>
+<![endif]-->
+
+<!--
+
+When anonymous line boxes (boxes that contain inline content) are adjacent to a float, a 3px gap appears between the line box and the edge of the float. This gap disappears when the content clears the float, causing the content to "jog" three pixels in the direction of the float. Note that the gap may be difficult to see when left-aligned text is adjacent to a right float, but it does exist and it can lead to "float drop" in tight layouts.
+
+Affects: Internet Explorer 5.0, 5.5, 6.0
+Likelihood: Likely
+-->
+<script src="../js/jquery-3.0.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="header-bg-container"></div>
+
+    <div id="full-page">
+
+        <header>
+            <div id="header">
+                <div id="logo" class="full-height"><a href="index.html"></a></div>
+                <div id="user-data" class="full-height">
+                    <div>Welcome User Name</div>
+                    <div>You have 0 items in your cart. Total $0</div>
+                </div>
+                <div id="top-header-right" class="full-height">
+                    <div id="top-header-right-top"><a href="#">Login</a> | <a href="#">Signup</a></div>
+                    <div id="search-box">
+                        <form action="#" method="get">
+                            <input id="keyword" class="txt_field" type="text" onblur="clearText(this)" onfocus="clearText(this)" title="keyword" name="keyword" value="Search" />
+                            <input id="searchbutton" class="sub-btn" type="submit" title="Search" value="" name="Search" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="header-menu-container">
+                <ul class="header-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href='#'>Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Shopping Cart</a></li>
+                    <li><a href="#">Check Out</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="header-banner">
+            <div id="header-banner-text">
+                <div id="header-banner-text-heading">Introducing Web Store</div>
+                <div id="header-banner-text-content">A customer buys products online all over the Pakistan and products will be delievered at door step of our client (customer) after receiving payment...</div>
+                <div id="browse-all-products"><a href="#">Browse All Products</a></div>
+            </div>
+            <div id="header-banner-image"></div>
+            <div class="clear-box"></div>
+        </div>
+        
+        <section id="middle-container">
+            <div id="middle-top"></div>
+            <div id="middle-middle">
+                <div id="middle-slider-container">
+                    <div class="spacer25pxH"></div>
+                    <div id="slider-container">
+                        <div class="slider-arrow full-height"><a href="#"><img src="../images/left_arrow.png" alt="Back" /></a></div>
+                        <div class="slider-image full-height"><img src="../images/slider/01.jpg" alt="01" /></div>
+                        <div class="slider-image full-height"><img src="../images/slider/02.jpg" alt="02" /></div>
+                        <div class="slider-image full-height"><img src="../images/slider/03.jpg" alt="03" /></div>
+                        <div class="slider-image full-height"><img src="../images/slider/04.jpg" alt="04" /></div>
+                        <div class="slider-image full-height"><img src="../images/slider/05.jpg" alt="05" /></div>
+                        <div class="slider-arrow full-height" style="float:right"><a href="#"><img src="../images/right_arrow.png" alt="Next" /></a></div>
+                    </div>
+                </div>
+                <div id="middle-left">
+                    <div id="categories-box">
+                        <div id="category-heading">Categories</div>
+                        <div id="categories">
+                            <ul>
+                                <li><a href="#">Home Appliances</a></li>
+                                <li><a href="#">Office</a></li>
+                                <li><a href="#">Engineering</a></li>
+                                <li><a href="#">Laptops</a></li>
+                                <li><a href="#">Electronics</a></li>
+                                <li><a href="#">Mobiles</a></li>
+                                <li><a href="#">Others</a></li>
+                            </ul>
+                        </div>
+                        <div id="news-letter-box">
+                            <div id="news-letter-heading">Newsletter</div>
+                            <form action="#" method="post">
+                                <div>
+                                    <input type="text" id="name" name="name" value="Name" />
+                                </div>
+                                <div>
+                                    <input type="text" id="email" name="email" value="Email" />
+                                </div>
+                                <input type="image" src="../images/subscribe.png" id="subscribe" alt="Subscribe" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="middle-right">
+                    <div class="spacer20pxH"></div>
+                    <div class="product">
+                        <div class="product-image"><a href="#"><img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add2Cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image"><a href="#"><img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add2Cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image"> <a href="#" target="_blank"> <img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add_to_cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image"><a href="#"><img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add2Cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image"><a href="#"><img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add2Cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-image"><a href="#"><img src="catalog/Product_A/Product_A_main.jpg" alt="Product_A" title="Click here to view details" /></a></div>
+                        <div class="product-title">Bulb</div>
+                        <div class="view-count">0 views</div>
+                        <div class="product-price">$ 50</div>
+                        <div class="spacer11pxH"></div>
+                        <div class="add-to-cart-box">
+                            <form action="#" method="post">
+                                <input type="hidden" name="action" value="add2Cart" />
+                                <input type="hidden" name="productId" value="" />
+                                <input type="submit" value="Add to Cart - " />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clear-box"></div>
+                </div>
+                <div class="clear-box"></div>
+            </div>
+            <div id="middle-bottom"></div>
+        </section>
+    
+        <footer>
+            <div class="spacer38pxH"></div>
+            <div id="footer-content">
+                <div class="footer-content-box">
+                    <div class="fcb-heading">Categories</div>
+                    <div class="fcb-items">
+                        <ul class="footer-menu">
+                            <li><a href="#">Home Appliances</a></li>
+                            <li><a href="#">Office</a></li>
+                            <li><a href="#">Engineering</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-box">
+                    <div class="fcb-heading">Pages</div>
+                    <div class="fcb-items">
+                        <ul class="footer-menu">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-content-box">
+                    <div class="fcb-heading">Social</div>
+                    <div class="fcb-items">
+                        <ul class="footer-menu">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="footer-content-right-box" class="full-height">
+                    <div id="fcrb-heading">About Us</div>
+                    <div id="fcrb-content">Online customers must have access to a computer and a method of payment. In general, higher levels of education, income, and occupation of the head of the household correspond to more favorable perceptions of shopping online. Also, increased exposure to technology increases the probability of developing favorable attitudes towards new shopping channels.</div>
+                </div>
+                <div class="clear-box"></div>
+            </div>
+            <div id="footer-copyright">Copyright &copy; 2012 ProgrammerPlusPlus.com | Developed by <a href="http://www.ProgrammerPlusPlus.com">ProgrammerPlusPlus</a></div>
+        </footer>
+    
+        <div class="spacer10pxH"></div>
+    </div>
+</body>
+</html>
